@@ -35,8 +35,8 @@
   <div class="row">
     <!-- Formulario de registro -->
     <div class="col-md-4">
-      <form action="agregar_usuario.php" method="POST" class="border p-3 rounded bg-light">
-        <h3 class="mb-3 text-center text-secondary">Registro de Usuario</h3>
+      <form action="agregar_usuario.php" method="POST" class="border p-3 rounded bg-light" style="background-color: rgba(255,255,255,0.7) !important;">
+        <h3 class="mb-3 text-center" style="color: #ff5722;">Registro de Usuario</h3>
         <div class="mb-2">
           <label for="nombre" class="form-label">Nombre</label>
           <input type="text" class="form-control" id="nombre" name="nombre" required>
@@ -63,16 +63,16 @@
 
     <!-- Tabla de usuarios centrada -->
     <div class="col-md-8 d-flex justify-content-center align-items-start">
-      <div class="table-responsive w-75 mt-4">
-        <table class="table table-bordered">
+      <div class="table-responsive w-75 mt-4" style="background-color: rgba(255,255,255,0.7); border-radius: 8px; padding: 10px;">
+        <table class="table table-bordered mb-0">
           <thead>
             <tr>
-              <th>ID</th>
-              <th>Nombre</th>
-              <th>Apellido</th>
-              <th>Email</th>
-              <th>Perfil</th>
-              <th>Acciones</th>
+              <th style="color: #ff5722;">ID</th>
+              <th style="color: #ff5722;">Nombre</th>
+              <th style="color: #ff5722;">Apellido</th>
+              <th style="color: #ff5722;">Email</th>
+              <th style="color: #ff5722;">Perfil</th>
+              <th style="color: #ff5722;">Acciones</th>
             </tr>
           </thead>
           <tbody>
