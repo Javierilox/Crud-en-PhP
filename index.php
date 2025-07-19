@@ -16,7 +16,7 @@
   <source src="IMG/HonkaiStarRail.mp4" type="video/mp4">
 </video>
 <!-- Encabezado de la página -->
-<h1 class="text-center text-secondary">CRUD en PHP</h1>
+<h1 class="text-center" style="color: #fafbfcff;">CRUD PHP</h1>
 <style>
   #bg-video {
     position: fixed;
@@ -70,6 +70,7 @@
               <th style="color: #ff5722;">ID</th>
               <th style="color: #ff5722;">Nombre</th>
               <th style="color: #ff5722;">Apellido</th>
+              <th style="color: #ff5722;">RUT</th>
               <th style="color: #ff5722;">Email</th>
               <th style="color: #ff5722;">Perfil</th>
               <th style="color: #ff5722;">Acciones</th>
@@ -78,20 +79,21 @@
           <tbody>
             <!-- Fila de ejemplo con botones -->
             <tr>
-              <td>1</td>
-              <td>Juan</td>
-              <td>Pérez</td>
-              <td>juan@example.com</td>
-              <td>Admin</td>
-              <td>
-                <button class="btn btn-sm btn-warning me-1" title="Editar">
-                  <i class="fas fa-edit"></i>
-                </button>
-                <button class="btn btn-sm btn-danger" title="Eliminar">
-                  <i class="fas fa-trash-alt"></i>
-                </button>
-              </td>
+              <?php include 'modelo/conexion.php'; 
+              $sql = $conn->query("SELECT * FROM usuario");
+              while($datos = $sql->fetch_object()){?>
+                <td><?php echo $datos->ID_Usuario; ?></td>
+                <td><?php echo $datos->Nombre; ?></td>
+                <td><?php echo $datos->Apellido; ?></td>
+                <td><?php echo $datos->RUT; ?></td>
+                <td><?php echo $datos->Correo; ?></td>
+                <td><?php echo $datos->ID_Perfil == 1 ? 'Admin' : 'Usuario'; ?></td>
+                <td>
+                  <a href="editar_usuario.php?id=<?php echo $datos->ID_Usuario; ?>" class="btn btn-warning btn-sm">Editar</a>
+                  <a href="eliminar_usuario.php?id=<?php echo $datos->ID_Usuario; ?>" class="btn btn-danger btn-sm">Eliminar</a>
+                </td>
             </tr>
+              <?php } ?>
             <!-- Aquí se mostrarán más usuarios registrados -->
           </tbody>
         </table>
