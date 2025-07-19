@@ -34,32 +34,55 @@
 <div class="container-fluid row">
   <div class="row">
     <!-- Formulario de registro -->
-    <div class="col-md-4">
-      <form action="agregar_usuario.php" method="POST" class="border p-3 rounded bg-light" style="background-color: rgba(255,255,255,0.7) !important;">
-        <h3 class="mb-3 text-center" style="color: #ff5722;">Registro de Usuario</h3>
-        <div class="mb-2">
-          <label for="nombre" class="form-label">Nombre</label>
-          <input type="text" class="form-control" id="nombre" name="nombre" required>
-        </div>
-        <div class="mb-2">
-          <label for="apellido" class="form-label">Apellido</label>
-          <input type="text" class="form-control" id="apellido" name="apellido" required>
-        </div>
-        <div class="mb-2">
-          <label for="email" class="form-label">Email</label>
-          <input type="email" class="form-control" id="email" name="Email">
-        </div>
-        <div class="mb-2">
-          <label for="perfil" class="form-label">Perfil</label>
-          <select class="form-select" id="perfil" name="perfil" required>
-            <option value="" disabled selected>Seleccione un perfil</option>
-            <option value="1">Admin</option>
-            <option value="2">Usuario</option>
-          </select>
-        </div>
-        <button type="submit" class="btn btn-primary w-100">Registrar</button>
-      </form>
+<div class="col-md-4">
+  <form action="controlador/registrar.php" method="POST" class="border p-3 rounded bg-light" style="background-color: rgba(255,255,255,0.7) !important;">
+    <h3 class="mb-3 text-center" style="color: #ff5722;">Registro de Usuario</h3>
+
+    <!-- Campo Nombre -->
+    <div class="mb-2">
+      <label for="Nombre" class="form-label">Nombre</label>
+      <input type="text" class="form-control" id="Nombre" name="Nombre" required>
     </div>
+
+    <!-- Campo Apellido -->
+    <div class="mb-2">
+      <label for="Apellido" class="form-label">Apellido</label>
+      <input type="text" class="form-control" id="Apellido" name="Apellido" required>
+    </div>
+
+    <!-- Campo Email -->
+    <div class="mb-2">
+      <label for="Email" class="form-label">Email</label>
+      <input type="email" class="form-control" id="Email" name="Email" required>
+    </div>
+
+    <!-- Campo RUT -->
+    <div class="mb-2">
+      <label for="RUT" class="form-label">RUT</label>
+      <input type="text" class="form-control" id="RUT" name="RUT" required>
+    </div>
+
+    <!-- Campo Contraseña -->
+    <div class="mb-2">
+      <label for="Contraseña" class="form-label">Contraseña</label>
+      <input type="password" class="form-control" id="Contraseña" name="Contraseña" required>
+    </div>
+
+    <!-- Campo Perfil -->
+    <div class="mb-2">
+      <label for="perfil" class="form-label">Perfil</label>
+      <select class="form-select" id="perfil" name="perfil" required>
+        <option value="" disabled selected>Seleccione un perfil</option>
+        <option value="1">Admin</option>
+        <option value="2">Usuario</option>
+      </select>
+    </div>
+
+    <!-- Botón de envío -->
+    <button type="submit" class="btn btn-primary w-100" name="btn_registrar" value="1">Registrar</button>
+  </form>
+</div>
+
 
     <!-- Tabla de usuarios centrada -->
     <div class="col-md-8 d-flex justify-content-center align-items-start">
