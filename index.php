@@ -9,9 +9,28 @@
      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 
 </head>
-<body>
+<body style="margin:0; padding:0;">
+
+<!-- Video de fondo -->
+<video autoplay loop muted playsinline id="bg-video" style="position:fixed; right:0; bottom:0; min-width:100vw; min-height:100vh; width:auto; height:auto; z-index:-1; object-fit:cover;">
+  <source src="IMG/HonkaiStarRail.mp4" type="video/mp4">
+</video>
 <!-- Encabezado de la página -->
 <h1 class="text-center text-secondary">CRUD en PHP</h1>
+<style>
+  #bg-video {
+    position: fixed;
+    left: 50%;
+    top: -6%; /* Mueve el video más arriba */
+    min-width: 100vw;
+    min-height: 100vh;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    object-fit: cover;
+    transform: translate( -50%, -30%); /* Ajusta el centro hacia arriba */
+  }
+</style>
 <div class="container-fluid row">
   <div class="row">
     <!-- Formulario de registro -->
