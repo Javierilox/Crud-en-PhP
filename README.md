@@ -6,9 +6,6 @@ Este proyecto es una aplicación CRUD (Crear, Leer, Actualizar, Eliminar) desarr
 - **Lenguaje principal:** PHP (versión 7.x o superior)
 - **Base de datos:** MySQL
 - **Frameworks/Librerías:**  
-    - No se utiliza un framework PHP, el proyecto está desarrollado con PHP puro.
     - **Bootstrap** para el diseño y la interfaz de usuario.
     - **jQuery** para facilitar la manipulación del DOM y las peticiones AJAX (si aplica).
 - **Servidor local:** XAMPP (Apache, MySQL, PHP, y phpMyAdmin)
-
-Puedes adaptar o ampliar las tecnologías según las necesidades del proyecto.
