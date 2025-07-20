@@ -5,26 +5,19 @@
 Este proyecto es una aplicación **CRUD** (Crear, Leer, Actualizar, Eliminar) desarrollada para gestionar registros de una base de datos de manera sencilla.
 
 ---
+### Tecnologías Utilizadas
 
-### Lenguaje Utilizado
-
-![PHP Logo](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg)  
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP Logo" width="40" height="40" />  
 **PHP**  
-El backend está construido en PHP, un lenguaje de programación ampliamente usado para el desarrollo web del lado del servidor.
+PHP se utiliza en el backend para procesar las solicitudes, gestionar la lógica de negocio y comunicarse con la base de datos.
 
----
-
-### Librerías / Frameworks
-
-![MySQL Logo](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg)  
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL Logo" width="40" height="40" />  
 **MySQL**  
-Se utiliza MySQL como sistema de gestión de bases de datos para almacenar y manipular los datos.
+MySQL es el sistema de gestión de bases de datos empleado para almacenar y consultar los registros de la aplicación.
 
-![Bootstrap Logo](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg)  
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap Logo" width="40" height="40" />  
 **Bootstrap**  
-Para el diseño de la interfaz gráfica se emplea Bootstrap, facilitando una apariencia moderna y responsiva.
-
----
+Bootstrap se usa en el frontend para diseñar la interfaz gráfica, asegurando que sea moderna y adaptable a diferentes dispositivos.
 
 ## ¿Qué hace el proyecto?
 
