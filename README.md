@@ -8,16 +8,13 @@ Este proyecto es una aplicación **CRUD** (Crear, Leer, Actualizar, Eliminar) de
 ### Tecnologías Utilizadas
 
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP Logo" width="40" height="40" />  
-**PHP**  
-PHP se utiliza en el backend para procesar las solicitudes, gestionar la lógica de negocio y comunicarse con la base de datos.
+**PHP**  se utiliza en el backend para procesar las solicitudes, gestionar la lógica de negocio y comunicarse con la base de datos.
 
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL Logo" width="40" height="40" />  
-**MySQL**  
-MySQL es el sistema de gestión de bases de datos empleado para almacenar y consultar los registros de la aplicación.
+**MySQL**  es el sistema de gestión de bases de datos empleado para almacenar y consultar los registros de la aplicación.
 
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap Logo" width="40" height="40" />  
-**Bootstrap**  
-Bootstrap se usa en el frontend para diseñar la interfaz gráfica, asegurando que sea moderna y adaptable a diferentes dispositivos.
+**Bootstrap**   se usa en el frontend para diseñar la interfaz gráfica, asegurando que sea moderna y adaptable a diferentes dispositivos.
 
 ## ¿Qué hace el proyecto?
 
