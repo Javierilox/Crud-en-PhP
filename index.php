@@ -113,7 +113,12 @@
                 <td><?php echo $datos->ID_Perfil == 1 ? 'Admin' : 'Usuario'; ?></td>
                 <td>
                   <a href="editar_usuario.php?id=<?php echo $datos->ID_Usuario; ?>" class="btn btn-warning btn-sm" name="btn_editar">Editar</a>
-                  <a href="eliminar_usuario.php?id=<?php echo $datos->ID_Usuario; ?>" class="btn btn-danger btn-sm" name="btn_eliminar">Eliminar</a>
+                  <a href="controlador/eliminar.php?id=<?php echo $datos->ID_Usuario; ?>" 
+                    class="btn btn-danger btn-sm"
+                    onclick="return confirm('¿Estás seguro de que deseas eliminar este usuario?');">
+                    Eliminar
+                  </a>
+
                 </td>
             </tr>
               <?php } ?>

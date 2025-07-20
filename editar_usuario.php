@@ -1,20 +1,34 @@
 <?php
-include_once 'modelo/conexion.php'; // conexión con $conn
+include_once 'modelo/conexion.php'; // conexión
 
 if (!isset($_GET['id'])) {
     echo "ID de usuario no especificado.";
     exit;
 }
-
+/**
+ * Obtiene el parámetro 'id' de la URL a través del método GET,
+ * lo convierte a un valor entero y lo asigna a la variable $id.
+ * Esto se utiliza para identificar de forma segura el usuario a editar.
+ *
+ * @var int $id Identificador numérico del usuario obtenido desde la URL.
+ */
 $id = intval($_GET['id']);
-
+/**
+ * @var string $sql Consulta SQL para seleccionar un usuario por su ID.
+ */
 $sql = "SELECT * FROM usuario WHERE ID_Usuario = ?";
 $stmt = $conn->prepare($sql);
-
+/**
+ * Prepara la consulta SQL para evitar inyecciones SQL.
+ * Utiliza una declaración preparada con un marcador de posición para el ID del usuario.
+ */
 if (!$stmt) {
     die("Error al preparar la consulta: " . $conn->error);
 }
-
+/**
+ * Vincula el parámetro $id a la consulta preparada.
+ * Esto asegura que el ID del usuario se utilice de forma segura en la consulta.
+ */
 $stmt->bind_param("i", $id);
 $stmt->execute();
 $resultado = $stmt->get_result();
@@ -23,7 +37,12 @@ if ($resultado->num_rows === 0) {
     echo "Usuario no encontrado.";
     exit;
 }
-
+/**
+ * Obtiene los datos del usuario como un arreglo asociativo.
+ * Esto permite acceder a los campos del usuario de manera más sencilla.
+ *
+ * @var array $usuario Datos del usuario obtenido de la base de datos.
+ */
 $usuario = $resultado->fetch_assoc();
 ?>
 
@@ -61,14 +80,17 @@ $usuario = $resultado->fetch_assoc();
                         <label for="apellido" class="form-label">Apellido:</label>
                         <input type="text" name="apellido" id="apellido" class="form-control" value="<?php echo htmlspecialchars($usuario['Apellido']); ?>" required>
                     </div>
-
                     <div class="mb-3">
-                        <label for="perfil" class="form-label">Perfil:</label>
-                        <input type="text" name="perfil" id="perfil" class="form-control" value="<?php echo htmlspecialchars($usuario['ID_Perfil']); ?>" required>
+                        <label for="perfil" class="form-label">Perfil</label>
+                        <select class="form-select" id="perfil" name="perfil" required>
+                            <option value="" disabled <?php echo empty($usuario['ID_Perfil']) ? 'selected' : ''; ?>>Seleccione un perfil</option>
+                            <option value="1" <?php echo $usuario['ID_Perfil'] == 1 ? 'selected' : ''; ?>>Admin</option>
+                            <option value="2" <?php echo $usuario['ID_Perfil'] == 2 ? 'selected' : ''; ?>>Usuario</option>
+                        </select>
                     </div>
                     <style>
                         .card.shadow {
-                            background: rgba(255,255,255,0.7) !important; /* 30% transparente */
+                            background: rgba(255,255,255,0.5) !important; /* 30% transparente */
                         }
                     </style>
 
